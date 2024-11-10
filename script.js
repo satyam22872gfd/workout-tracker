@@ -116,3 +116,16 @@ const firebaseConfig = {
 
 
 
+function submitForm(e) {
+    e.preventDefault();
+
+    var name = getElementVal("name");
+    var password = getElementVal("password");
+
+    saveMessages(name, password);
+
+    // Redirect to index.html after saving
+    window.location.href = "index.html";
+
+    document.getElementById("contactForm").reset();
+}
